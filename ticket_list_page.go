@@ -48,7 +48,7 @@ func (p *TicketListPage) SelectItem() {
 	if len(p.cachedResults) == 0 {
 		return
 	}
-	q := new(TicketShowPage)
+	q := new(TicketShowBoxPage)
 	q.TicketId = p.GetSelectedTicketId()
 	currentPage = q
 	q.Create()

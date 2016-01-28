@@ -101,6 +101,9 @@ func changePage() {
 	case *TicketShowPage:
 		log.Debugf("changePage: TicketShowPage %s (%p)", currentPage.Id(), currentPage)
 		currentPage.Create()
+	case *TicketShowBoxPage:
+		log.Debugf("changePage: TicketShowBoxPage %s (%p)", currentPage.Id(), currentPage)
+		currentPage.Create()
 	case *HelpPage:
 		log.Debugf("changePage: HelpPage %s (%p)", currentPage.Id(), currentPage)
 		currentPage.Create()

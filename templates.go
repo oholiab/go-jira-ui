@@ -34,6 +34,8 @@ subtasks:
 {{ range .fields.issuelinks }}{{if .inwardIssue}}  - [{{ .inwardIssue.key }}](fg-red)[{{.inwardIssue.fields.status.name}}] -- {{.inwardIssue.fields.summary}}
 {{end}}{{end}}
 
+(break)
+
 [description:](fg-green)
 
   {{ or .fields.description "" | indent 2 }}
@@ -41,6 +43,8 @@ subtasks:
 [comments:](fg-green)
 
 {{ range .fields.comment.comments }}
+
+(break)
   - [{{.author.name}} at {{.created}}](fg-blue)
     {{ or .body "" | indent 4}}
 
